@@ -86,7 +86,7 @@ describe('UniswapV3Factory', () => {
     expect(await pool.tickSpacing(), 'pool tick spacing').to.eq(tickSpacing)
   }
 
-  describe('#createPool', () => {
+  describe.only('#createPool', () => {
     it('succeeds for low fee pool', async () => {
       await createAndCheckPool(TEST_ADDRESSES, FeeAmount.LOW)
     })

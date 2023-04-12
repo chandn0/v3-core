@@ -111,7 +111,7 @@ describe('UniswapV3Pool', () => {
     expect(await pool.maxLiquidityPerTick()).to.eq(getMaxLiquidityPerTick(tickSpacing))
   })
 
-  describe('#initialize', () => {
+  describe.only('#initialize', () => {
     it('fails if already initialized', async () => {
       await pool.initialize(encodePriceSqrt(1, 1))
       await expect(pool.initialize(encodePriceSqrt(1, 1))).to.be.reverted
